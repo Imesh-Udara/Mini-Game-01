@@ -6,10 +6,15 @@
     <title>Mini Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="body" onload="idleAnimationsStarts();" onkeypress="keyCheck(event);">
+<body class="body" onload="idleAnimationsStarts(); createBoxes();" onkeypress="keyCheck(event);">
     <div class="background-image" id="background">
 
         <img src="images/character/Idle__000.png" alt="" class="girl" id="girl">
+        <!-- <h2>Score</h2> -->
+        <img src="images/score-board.png" alt="scoreboard" class="scoreboard" id="scoreboard">
+        <div class="score" id="score">
+            0
+        </div>
 
     </div>
 

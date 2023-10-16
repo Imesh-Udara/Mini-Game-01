@@ -8,10 +8,42 @@
     background-image: url("images/41524.jpg");
     background-size: cover;
     background-repeat: repeat-x;
+    overflow-x: hidden;
+    position: absolute;
 }
 
 .girl{
-    height: 280px;
-    margin-top: 590px;
+    height: 210px;
+    margin-top: 647px;
     position: absolute;
+}
+
+.box{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    /* background-color: brown; */
+    margin-top: 780px;
+    background-image: url(images/bomb.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.score{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 80px;
+    margin-top: 34px;
+    position: absolute;
+}
+
+.scoreboard{
+
+    height: 100px;
+    width: 200px;
+    margin-top: 20px;
+    position: absolute;
+
 }
