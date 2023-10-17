@@ -4,6 +4,14 @@ idleAnim = 0;
 runImageNumber = 0;
 runAnim = 0;
 
+//Sounds
+
+function playMusic(){
+    var myBackgroundMusic = new Audio('background.mp3');
+myBackgroundMusic.play();
+}
+
+
 
 //idleAnimation
 
@@ -15,6 +23,7 @@ function idleAnimation(){
     }
 
     girl.src = "images/character/Idle__00"+idleImageNumber+".png";
+    // myBackgroundMusic.play();
 
 }
 
@@ -189,7 +198,16 @@ function girlDeadAnimation(){
     deadImageNumber = deadImageNumber +1;
 
     if(deadImageNumber == 10){
-        deadImageNumber = 9
+        deadImageNumber = 9;
+
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("end-score").innerHTML = score;
+
     }
     girl.src = "images/character/Dead__00"+deadImageNumber+".png ";
 }
+
+function reload(){
+    location.reload();
+}
+

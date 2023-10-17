@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;300;500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="body" onload="idleAnimationsStarts(); createBoxes();" onkeypress="keyCheck(event);">
+<body class="body" onload="idleAnimationsStarts(); createBoxes(); playMusic();" onkeypress="keyCheck(event);">
     <div class="background-image" id="background">
 
         <img src="images/character/Idle__000.png" alt="" class="girl" id="girl">
@@ -16,6 +19,13 @@
             0
         </div>
 
+    </div>
+
+    <div class="end" id="end">
+        <div style="color: rgb(10, 10, 10);">Game Over</div>
+        <div class="" style="color: rgb(0, 119, 26);">Your Score</div>
+        <div style="color: rgb(250, 0, 137);" id="end-score">0</div>
+        <button class="btn" onclick="reload();">Try Again</button>
     </div>
 
     <script src="script.js"></script>
