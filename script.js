@@ -107,6 +107,10 @@ function keyCheck(event){
         if(boxAnimationId == 0){
             boxAnimationId = setInterval(boxAnimation,100);
         }
+        /////////////////////////////////////////////////
+        if(box02AnimationId == 0){
+            box02AnimationId = setInterval(box02Animation,100);
+        }
     }
 
     if(keyCode == 32){
@@ -119,6 +123,10 @@ function keyCheck(event){
         }
         if(boxAnimationId == 0){
             boxAnimationId = setInterval(boxAnimation,100);
+        }
+        //////////////////////////////////////////////////
+        if(box02AnimationId == 0){
+            box02AnimationId = setInterval(box02Animation,100);
         }
     }
 
@@ -191,6 +199,62 @@ function boxAnimation(){
     }
 }
 
+//////////////////////////////////////////////////////////////////
+box02MarginLeft = 940;
+function createBoxes02(){
+
+    for(var i=0;i<= 10; i++){
+
+    var box02 = document.createElement("div");
+    box02.className = "box02";
+    document.getElementById("background").appendChild(box02);
+    box02.style.marginLeft = box02MarginLeft + "px";
+    box02.id = "box02" + i ;
+
+    // boxMarginLeft = boxMarginLeft + 800;
+
+    if(i<5){
+        box02MarginLeft = box02MarginLeft + 1000;
+    }
+
+    if(i>=5){
+        box02MarginLeft = box02MarginLeft + 500;
+    }
+
+    }
+
+    
+}
+
+////////////////////////////////////////////////////////
+var box02AnimationId = 0;
+function box02Animation(){
+    for(var i=0; i<10; i++){
+        var box02 = document.getElementById("box02"+i);
+        var currentMarginLeft = getComputedStyle(box02).marginLeft;
+        var newMarginLeft = parseInt(currentMarginLeft) - 35;
+        box02.style.marginLeft = newMarginLeft + "px";
+
+        if (newMarginLeft >= -110 & newMarginLeft <= 100){
+            if(girlMarginTop > 600){
+                clearInterval(box02AnimationId);
+        
+                clearInterval(runAnim);
+                runAnim = -1;
+        
+                clearInterval(jumpAnimationNumber);
+                jumpAnimationNumber = -1;
+        
+                clearInterval(moveBackgroundAnimationId);
+                moveBackgroundAnimationId = -1;
+
+                deadAnimationNumber = setInterval(girlDeadAnimation,100);
+        
+            }
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////
 
 deadImageNumber = 0;
 deadAnimationNumber = 0;

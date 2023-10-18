@@ -30,6 +30,18 @@
 
 }
 
+.box02{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    /* background-color: brown; */
+    margin-top: 780px;
+    background-image: url(images/fire.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
 .score{
     font-size: 50px;
     font-weight: bold;
